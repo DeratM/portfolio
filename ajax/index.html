@@ -1,0 +1,113 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Derat Miranda">
+    <title>JavaScript Calculator</title>
+    <link href="assets/css/stylesheet.css" rel="stylesheet"/>
+
+</head>
+<body>
+<form id="myform">
+    <div class="formcontainer">
+        <h1>Unit Converter (AJAX)</h1>
+        <fieldset id="detail">
+            <legend>Calculator (AJAX)</legend>  
+            <br>
+            
+            <label class="formlabel" for="Operand1">From Value: </label>
+            <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15"
+                    data-rule-required="true"  data-msg-required="Operand 1 is Required" 
+                    data-rule-number="true" data-msg-number="Operand 1 must be a Number">
+            <label for="Operand1" class="error" id="Operand1Msg"></label>
+            <br><br>
+
+            <label class="formlabel">From Unit: </label>
+                
+            <label for="cmOperator">
+                <input type="radio" name="Operator" id="cmOperator" value="cm"
+                           data-rule-required="true" data-msg-required="Operator is Required" />Centimeters
+            </label>
+
+            <label for="mOperator">
+                <input type="radio" name="Operator" id="mOperator" value="m">Meters
+            </label>
+
+            <label for="kmOperator">
+                <input type="radio" name="Operator" id="kmOperator" value="km">Kilometers
+            </label>
+
+            <label for="inOperator">
+                <input type="radio" name="Operator" id="inOperator" value="in">Inches
+            </label>
+
+            <label for="ftOperator">
+                <input type="radio" name="Operator" id="ftOperator" value="ft">Feet
+            </label>
+
+            <label for="ydOperator">
+                <input type="radio" name="Operator" id="ydOperator" value="yd">Yards
+            </label>
+            
+            <label for="miOperator">
+                <input type="radio" name="Operator" id="miOperator" value="mi">Miles
+            </label>
+
+            <label for="Operator" class="error" id="fromMsg"></label>
+            <br><br>
+
+            
+            <!-- To -->
+            <label class="formlabel"> To Unit: </label>
+                  
+            <label for="To-cm-Operator">
+                <input type="radio" name="ToOperator" id="To-cm-Operator" value="cm"
+                           data-rule-required="true" data-msg-required="Operator is Required" />Centimeters
+            </label>
+
+            <label for="To-m-Operator">
+                <input type="radio" name="ToOperator" id="To-m-Operator" value="m">Meters
+            </label>
+
+            <label for="To-km-Operator">
+                <input type="radio" name="ToOperator" id="To-km-Operator" value="km">Kilometers
+            </label>
+
+            <label for="To-in-Operator">
+                <input type="radio" name="ToOperator" id="To-in-Operator" value="in">Inches
+            </label>
+
+            <label for="To-ft-Operator">
+                <input type="radio" name="ToOperator" id="To-ft-Operator" value="ft">Feet
+            </label>
+
+            <label for="To-yd-Operator">
+                <input type="radio" name="ToOperator" id="To-yd-Operator" value="yd">Yards
+            </label>
+            
+            <label for="To-mi-Operator">
+                <input type="radio" name="ToOperator" id="To-mi-Operator" value="mi">Miles
+            </label>
+
+            <label for="ToOperator" class="error" id="toMsg"></label>
+            <br><br>
+      
+
+            <label class="formlabel">Value: </label>
+            <span id="Result"></span>
+            <br><br>
+
+            <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+            <input type="button" value="Clear" name="Clear" onclick="clearform();">
+
+        </fieldset>
+    </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
