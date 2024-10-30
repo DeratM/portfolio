@@ -1,27 +1,104 @@
 <!doctype html>
 <html>
 <head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-<link rel="stylesheet" href="style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="scripts.js"></script>
-</head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Test Portfolio</title>
+<meta name="description" content="personal portfolio">
+<meta name="author" content="Derat Miranda">
+<meta name="keywords" content="E-Commerce, HTML, CSS, PHP ,JavaScript">
 
+
+<link rel="stylesheet" href="style.css">
+
+</head>
   <body>
+  <main>
+
     <div class="wrapper" >
        <div class="image-container">
-         <img src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image">
+         <img src="Portfolio-starting-window.png" alt="cover">
        </div>
+        <section class="start">
 
-       <div class="content">
-          <section class="section hero"></section>
-          <section class="section intro"></section>
-          <section class="section contact"></section>
-        </div>
+          <article class="section hero"></article>
+
+        </section>
+
+        <section id="main">
+          <article id="profile">
+           <h2>Personal Details</h2>
+           <div class="bio">
+           <img itemprop="image" src="../assets/imgs/headshot.png" alt="Derat Miranda">
+           <p itemprop="description">As someone who is in web development we have to be resourceful and adaptive to this ever changing field. I am knowledgeable in both HTML, CSS and some Javascript. As well fluent in Spanish and English. I am looking forward to graduating from the University of Arkansas at Little Rock in the spring of 2026.  </p>
+           </div>  
+           <dl class="details">
+             <dt>Name</dt>
+             <dd itemprop="name">
+               <span itemprop="givenName">Derat</span> <span itemprop="familyName">Miranda</span>
+             </dd>
+             <dt>Date of birth</dt>
+             <dd itemprop="birthDate"><time datetime="2000-10-12">04/17/2004</time></dd>
+             <dt>Nationality</dt>
+             <dd itemprop="nationality">United States</dd>
+             <dt>Location</dt>
+             <dd itemprop="homeLocation">Arkansas</dd>
+             <dt>Telephone</dt>
+             <dd>
+               <a itemprop="telephone" href="tel:555.555.5555">501.408.9374</a>
+             </dd>
+             <dt>Email</dt>
+             <dd>
+               <a itemprop="email" href="mailto:email@mail.com">deratmiranda04@gmail.com</a>
+             </dd>
+             <dt>Address</dt>
+       
+             <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+               <span itemprop="streetAddress">2605 Cherry Crossing</span>
+               <span itemprop="addressLocality">Benton</span>
+               <span itemprop="postalCode">72015</span>
+               <span itemprop="addressCountry">USA</span>
+             </dd>
+           </dl>
+     
+          </article>
+     
+           <article id="resume">
+             <h2>Resume</h2>
+     
+           </article>
+     
+           <article id="education">
+             <h2>Education</h2>
+     
+           </article>
+     
+           <article id="accomplishments">
+             <h2>Accomplishments</h2>
+     
+           </article>
+     
+           <article id="letter">
+             <h2>Cover Letter</h2>
+     
+           </article>
+     
+           <article id="examples">
+             <h2>Work Examples</h2>
+     
+           </article>
+     
+         <footer>
+           <h6>Derat Miranda | &copy; 2024 </h6>
+         </footer>
+       </section>
 
      </div>
+
+
+  </main>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="scripts.js"></script>
 </html>
