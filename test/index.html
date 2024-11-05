@@ -27,9 +27,11 @@
 
         <section id="main">
           <article id="profile">
-           <h2>Personal Details</h2>
-           <div class="bio">
+            <div id="title">
+           <h2>About Me</h2>
            <img itemprop="image" src="../assets/imgs/headshot.png" alt="Derat Miranda">
+          </div>
+           <div class="bio">
            <p itemprop="description">As someone who is in web development we have to be resourceful and adaptive to this ever changing field. I am knowledgeable in both HTML, CSS and some Javascript. As well fluent in Spanish and English. I am looking forward to graduating from the University of Arkansas at Little Rock in the spring of 2026.  </p>
            </div>  
            <dl class="details">
@@ -65,6 +67,44 @@
      
            <article id="resume">
              <h2>Resume</h2>
+
+        <div id="pdf">
+          <p>You are welcome to download my resume in either <a href="assets/resources/BruceBauerResume.doc">Microsoft Word</a> or <a href="../assets/imgs/Resume.pdf">PDF</a> format.</p>
+        </div>
+
+        <article class="job">
+        <h3 itemprop="jobTitle">Sound engineer/ Information Technology</h3>
+        <div class="work" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <span itemprop="name">Iglesia Templo Cristiano</span>
+          <span>January 2019 - Present</span>
+          <p itemprop="description">Ensure the setup and maintenance of all components related to the PA system, as well as oversee the upkeep of our other technological assets.</p>
+          <span itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <a itemprop="url" href="http://link-to-company.com">Company URL</a>
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Little Rock, Arkansas</span>
+          </span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Previous Jobs - Notice Slightly Different Format-->
+      <article class="job" itemscope itemtype="http://schema.org/Organization">
+        <h3 itemprop="name">Assistant</h3>
+        <div class="work">
+        <span itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <span itemprop="name">Hair Designers</span>
+        <a itemprop="url" href="http://link-to-company.com">Company URL</a>
+        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="addressLocality">Benton, Arkansas</span>
+        </span>
+        </span>
+        <div itemscope itemtype="https://schema.org/EmployeeRole">
+        <span itemprop="startDate" content="2006-02-21T20:00">March 2022</span> - 
+        <span itemprop="endDate" content="2009-02-21T20:00">August 2022</span>
+        </div>
+        <p itemprop="description">Answer phone calls, cater to waiting clients, check clients in, and clean. </p>
+      </div>
+      </article>
      
            </article>
      
