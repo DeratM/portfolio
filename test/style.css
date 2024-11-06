@@ -73,7 +73,6 @@
     ;
 
     z-index: 3;
-    padding-top: 50px;
   }
 
   /* Colors*/
@@ -109,6 +108,44 @@
   img{
     max-width: 100%;
   }
+
+/* Nav */
+
+nav {
+  padding-top: 25px;
+  border-color: var(--accent-color-1);
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 20px 20px 0px 20px;
+}
+
+nav li {
+  list-style-type: none;
+  border-color: var(--accent-color-1);
+}
+
+nav a:link, nav a:visited {
+  display: block;
+  padding: 8px 16px;
+  border: 1px solid #000;
+  text-align: center;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.5s ease;
+  color: #ffffff;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+
 
 /* Resume */
 
@@ -170,17 +207,33 @@
   /*Resume*/
 
   #pdf{
-    margin:20px;
+    margin-left:20px;
   }
 
   #resume article{
-    padding:10px;
+    padding:15px;
   }
 
   #resume .work{
     padding-left:25px;
     background-color: white;
   }
+
+  /*Education*/
+
+  #education .classes{
+    margin:15px;
+  }
+
+  #education h3{
+    margin:10px;
+  }
+
+  #education .shift{
+    margin:10px;
+    margin-left:25px;
+  }
+
 
   /* Grid Area */
   #profile{
