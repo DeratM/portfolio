@@ -94,7 +94,7 @@
   }
 
   #letter{
-    background-color: beige;
+    background-color: black;
   }
 
   #examples{
@@ -210,8 +210,15 @@
 
   /*Education*/
 
+  #education{
+    background-color:#F2F2F2;
+  }
+
+  
+
   #education .classes{
     margin:15px;
+    color:#404040 ;
     
   }
 
@@ -219,19 +226,36 @@
     margin:10px;
   }
 
+  
+
   #education .shift{
-    margin:10px;
-    margin-left:25px;
+    padding:10px;
+    padding-left:25px;
     border-bottom-style: outset;
     border-color: white;
+    padding-bottom: 5px;
   }
 
+  .classes .other:nth-child(2n + 1){
+    background-color: #73706F;
+    padding: 5px;
+    color:#F2F2F2;
+
+  }
 
   /*Cover Letter*/
 
+  #letter h2{
+    color:white;
+  }
+
   #letter #cover{
     margin:20px;
-    list-style-type: none;
+    border-style: outset;
+    border-width: 5px;
+    border-color: #93908E;
+    background-color: white;
+    padding: 20px;
   }
 
   #letter #cover li{
@@ -242,7 +266,8 @@
 
   .work-ex-pic{
     padding-right:10px;
-    padding-bottom:5px;
+    padding-bottom:10px;
+    
   }
 
   #writing p{
@@ -327,7 +352,28 @@
   }
    */
 
-  @media screen and (min-width:768px){ }
+  @media screen and (min-width:768px){
+    .work-ex-pic{
+      width: 20%;
+      float: left;
+      padding-right:25px;
+      margin-bottom: 30px;
+      
+    }
+
+    #letter{
+      padding-left:10%;
+      padding-right:10%;
+    }
+
+    #letter #cover{
+      padding:10%;
+      background-color: white;
+
+    }
+
+
+   }
 
 
   @media screen and (min-width:992px) { 
@@ -357,17 +403,58 @@
 
       }
 
-      #education{
-        padding-left: 2%;
-        padding-right:2%;
-        padding-bottom: 2%;
-      }
-
-      #education .shift{
-        padding-bottom: 2px;
-      }
+      
 
       
+
+      #writing{
+        display: flex;
+        align-items: baseline;
+      }
+
+      #web-project{
+        display: flex;
+        align-items: baseline;
+      }
+
+      #database{
+        display: flex;
+        align-items: baseline;
+      }
+
+      #programming{
+        display: flex;
+        align-items: baseline;
+      }
+
+      #softskills{
+        display: flex;
+        align-items: baseline;
+      }
+
+      #capstone{
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #capstone .work-ex-pic{
+        margin-left: 15%;
+        margin-top:5%;
+        width: 75%;
+      }
+
+
+      .work-ex-pic{
+        width: 45%;
+        padding-right:25px;
+        margin-bottom: 30px;
+
+        
+      }
+
+  
+
       
+    
 
   }
