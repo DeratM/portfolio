@@ -22,7 +22,7 @@
   }
   
   .start .section.hero {
-    background-image: url(../imgs/landscape.jpg);
+    background-image: url(../imgs/fer-sehen-6nS6_59REnA-unsplash.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -212,6 +212,7 @@
 
   #education .classes{
     margin:15px;
+    
   }
 
   #education h3{
@@ -221,7 +222,10 @@
   #education .shift{
     margin:10px;
     margin-left:25px;
+    border-bottom-style: outset;
+    border-color: white;
   }
+
 
   /*Cover Letter*/
 
@@ -310,12 +314,18 @@
     padding:20px;
   }
 
+  #text-test p{
+    z-index: 2;
+    color: aqua;
+  }
+
   /*makes the screen small to check moible (REMOVE when done)*/
-  html {
+  
+  /* html {
     width: 576px ;
     margin-left:30%;
   }
-  
+   */
 
   @media screen and (min-width:768px){ }
 
@@ -333,5 +343,31 @@
         padding: 10px;
         float:right;
       }
+
+      #letter{
+        padding-left:30%;
+        padding-right:30%;
+      }
+
+      #letter #cover{
+        padding:5%;
+        border-style: solid;
+        border-width: 5px;
+        background-color: white;
+
+      }
+
+      #education{
+        padding-left: 2%;
+        padding-right:2%;
+        padding-bottom: 2%;
+      }
+
+      #education .shift{
+        padding-bottom: 2px;
+      }
+
+      
+      
 
   }
