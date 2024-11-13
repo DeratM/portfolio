@@ -3,6 +3,54 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  /* Thasadith Font */
+  .thasadith-regular {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .thasadith-bold {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .thasadith-regular-italic {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .thasadith-bold-italic {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  h2, h3, h4, h5, h6{
+    font-family: "IBM Plex Serif", serif;
+    
+  }
+
+  main{
+    font-family: "Thasadith", sans-serif;
+  }
+
+  /* IBM Font */
+  .ibm-plex-serif-regular {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-semibold {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
   
   .wrapper,
   .section.hero {
