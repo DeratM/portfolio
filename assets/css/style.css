@@ -77,9 +77,6 @@
     height: 100vh;
   }
 
-  .section.intro {
-    background-color: red;
-  }
 
   .section.contact {
     background-color: blue;
@@ -113,10 +110,9 @@
     grid-template-areas: 
     "profile"
     "resume"
-    "education"
-    "accomplishments"
-    "letter"
     "examples"
+    "education"
+    "letter"
     "footer"
     ;
 
@@ -125,62 +121,10 @@
 
   /* Colors remove later*/
 
-  #profile{
-    background-color: red;
-  }
-
-  #resume{
-    background-color: blue;
-  }
-
-  #education{
-    background-color: brown;
-  }
-
-  #accomplishments{
-    background-color: blueviolet;
-  }
-
-  #letter{
-    background-color: black;
-  }
-
-  #examples{
-    background-color: aquamarine;
-  }
-
-  footer{
-    background-color: orange;
-  }
 
   img{
     max-width: 100%;
   }
-
-  #writing{
-    background-color: blueviolet;
-  }
-
-  #web-project{
-    background-color: brown;
-  }
-
-  #database{
-    background-color:bisque;
-  }
-
-  #programming{
-    background-color: mediumspringgreen;
-  }
-
-  #softskills{
-    background-color: darkolivegreen;
-  }
-
-  #capstone{
-    background-color: cadetblue;
-  }
-
 
 
 /* Resume */
@@ -190,6 +134,7 @@
   display: grid;
   grid-template-columns:repeat(2, 1fr);;
   grid-template-rows: repeat(2, 1fr); ;
+  background-color:#F2F2F2;
 }
 
 #profile #title{
@@ -210,6 +155,8 @@
   grid-row: 1/2;
   margin-top: 50px;
   margin-right:2rem;
+  
+  
 }
 
 
@@ -227,14 +174,15 @@
     font-weight: 800;
     grid-column: 1;
     padding: 10px 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #73706F;
+    
   }
 
   dd {
     margin: 0;
     grid-column: 2;
     padding: 10px 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #73706F;
   }
 
   main{
@@ -243,8 +191,14 @@
 
   /*Resume*/
 
+  #resume{
+    background-color: #191818;
+    color:#F2F2F2;
+  }
+
   #pdf{
     margin-left:20px;
+    text-align: center;
   }
 
   #resume article{
@@ -253,7 +207,6 @@
 
   #resume .work{
     padding-left:25px;
-    background-color: white;
   }
 
   /*Education*/
@@ -280,18 +233,23 @@
     padding:10px;
     padding-left:25px;
     border-bottom-style: outset;
-    border-color: white;
-    padding-bottom: 5px;
+    border-bottom-color:white;
+    border-bottom-width: 2px;
   }
 
   .classes .other:nth-child(2n + 1){
     background-color: #73706F;
     padding: 5px;
     color:#F2F2F2;
+    text-shadow: .5px 0 #191818;
 
   }
 
   /*Cover Letter*/
+
+  #letter{
+    background-color: #191818;
+  }
 
   #letter h2{
     color:white;
@@ -312,19 +270,50 @@
 
   /* Work Examples*/
 
+  .examples{
+    background-color: #191818;
+  }
+
+  .examples h2{
+    border-style: outset;
+    border-color: #F2F2F2;
+    border-width: 5px;
+    background-color: #404040;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    color:white;
+    text-decoration: none;
+  }
+
+  .examples a{
+    text-decoration: none;
+  }
+
+
   .work-ex-pic{
     padding-right:10px;
     padding-bottom:10px;
     
   }
 
-  #writing p{
-    padding:20px;
+  #capstone{
+    background-color: #191818;
+    color:#F2F2F2;
   }
 
-  #writing{
-    border-bottom-style: outset;
-    border-width: 10px;
+  #programming{
+    background-color: #191818;
+    color:#F2F2F2;
+  }
+
+  #web-project{
+    background-color: #191818;
+    color:#F2F2F2;
+  }
+
+  #writing p{
+    padding:20px;
   }
 
   #web-project p{
@@ -364,22 +353,22 @@
     grid-area: education;
   }
 
-  #accomplishments{
-    grid-area: accomplishments;
-  }
-
   #letter{
     grid-area: letter;
   }
 
-  #examples{
+  .examples{
     grid-area: examples;
   }
 
   footer{
+    background-color: #191818;
+    color:#F2F2F2;
     grid-area: footer;
     text-align: center;
-    padding:3.5px
+    padding:3.5;
+    font-size: 20px;
+    padding-bottom: 10px;
   }
 
   h2{
@@ -420,11 +409,53 @@
 
     }
 
+    .examples h2{
+      margin-left: 35%;
+      margin-right: 35%;
+
+    }
+
 
    }
 
 
   @media screen and (min-width:992px) { 
+
+   
+    #profile #title{
+      display: inline;
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+    
+    #profile #title img{
+      width: 125px;
+      margin-left:45%;
+    }
+    
+    #profile .bio{
+      grid-column: 2/3;
+      grid-row: 2/3;
+      background-color: #191818;
+      color:#F2F2F2;
+      margin:10px;
+      padding:15px;
+      border-style: inset;
+      border-color: #93908E;
+      border-width: 5px;
+    }
+    
+    
+      dl {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background-color: #191818;
+        color:#F2F2F2;
+        border-style: inset;
+        border-color: #93908E;
+        border-width: 5px;
+      }
+
     article img{
       float: left;
       width: 200px;
@@ -449,6 +480,12 @@
         border-width: 5px;
         background-color: white;
 
+      }
+
+      .examples h2{
+        margin-left: 42%;
+        margin-right: 42%;
+  
       }
 
       
