@@ -13,6 +13,12 @@
     box-sizing: border-box;
   }
 
+  html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
   /* Thasadith Font */
   .thasadith-regular {
     font-family: "Thasadith", sans-serif;
@@ -43,10 +49,6 @@
     
   }
 
-  main{
-    font-family: "Thasadith", sans-serif;
-  }
-
   /* IBM Font */
   .ibm-plex-serif-regular {
     font-family: "IBM Plex Serif", serif;
@@ -58,6 +60,12 @@
     font-family: "IBM Plex Serif", serif;
     font-weight: 600;
     font-style: normal;
+  }
+
+   body{
+    background-color: var(--primary-bg-color);
+    font-family: "Thasadith", sans-serif;
+    color:var(--text-color)
   }
   
   
@@ -79,12 +87,13 @@
   }
   
   .start .section.hero {
-    background-image: url(../imgs/fer-sehen-6nS6_59REnA-unsplash.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 100vh;
-  }
+  background-image: url(../imgs/fer-sehen-6nS6_59REnA-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+  overflow-x: hidden;
+}
 
 
   .image-container {
@@ -108,59 +117,78 @@
   
   }
 
-  #main{
-    display: grid;
-    grid-template-areas: 
-    "profile"
-    "resume"
-    "examples"
-    "education"
-    "letter"
-    "footer"
-    ;
 
-    z-index: 3;
-  }
-
-  /* Colors remove later*/
-
-
-  img{
-    max-width: 100%;
-  }
-
-
-/* Resume */
+/* Profile Setion */
 
 #profile{
-  padding-top: 50px;
-  display: grid;
-  grid-template-columns:repeat(2, 1fr);;
-  grid-template-rows: repeat(2, 1fr); ;
-  background-color:#F2F2F2;
+  display:flex;
+  flex-direction:column;
+  padding-top: 10%;
+ 
 }
 
-#profile #title{
-  display: inline;
-  grid-column: 1/2;
-  grid-row: 1/2;
+#profile h2{
+  text-align: center;
 }
 
-#profile #title img{
-  margin-top: 50px;
-  width: 100px;
-  margin-left:32.5%;
+#main-port{
+  padding: 5% 10% 0 10%;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  gap:5%;
   
 }
 
-#profile .bio{
-  grid-column: 2/3;
-  grid-row: 1/2;
-  margin-top: 50px;
-  margin-right:2rem;
-  
+#pfp{
+  background-image: url(../imgs/headshot.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width:100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+#personal-info{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  justify-content: center;
   
 }
+
+.bio{
+  background-color: var(--accent-color);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  padding:2.5%;
+  color:var(--primary-bg-color);
+
+}
+
+.details{
+   background-color: var(--accent-color);
+   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+   padding:2.5%;
+   color:var(--primary-bg-color);
+
+}
+
+.details a{
+  color: inherit; 
+  text-decoration: none;
+}
+
+.details a:hover{
+  color: var(--text-color); 
+}
+
+  #profile img{
+    all:unset !important;
+    width:5%;
+  }
 
 
   dl {
@@ -170,7 +198,6 @@
     display: grid;
     grid-template: repeat(8, auto) / 8em 1fr;
     font-size:.9rem;
-    margin:10px;
   }
   
   dt {
@@ -188,361 +215,82 @@
     border-bottom: 1px solid #73706F;
   }
 
-  main{
-    overflow: hidden;
+
+
+/* Resume and Cover Letter Section */
+
+#resume-CoverLetter h2{
+text-align: center;
+padding:2.5%;
+
+}
+
+
+  #res-let-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-content: space-between;
+    gap:50px;
+    
+
+
   }
 
-  /*Resume*/
+.card{
+  background-color: var(--accent-color);
+  width:350px;
+  height:auto;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-radius: 5%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  gap:10px;
+  color:var(--primary-bg-color);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
 
-  #resume{
-    background-color: #191818;
-    color:#F2F2F2;
-  }
 
-  #pdf{
-    margin-left:20px;
-    text-align: center;
-  }
+.card-img{
+  background-color:lightgray;
+  display: flex;
+  justify-content: center;
+  border-radius: 5%;
+  width:300px;
+}
 
-  #resume article{
-    padding:15px;
-  }
+.card a{
+  color: inherit;        
+  text-decoration: none; 
+  background-color:var(--text-color); 
+  font-size: 18px;
+  padding:7px;
+  border-radius: 5%;
 
-  #resume .work{
-    padding-left:25px;
-  }
+}
 
-  /*Education*/
+.card a:hover{
+  background-color: var(--secondary-color);
 
-  #education{
-    background-color:#F2F2F2;
-  }
+}
 
+.img{
+  background-image:url(../imgs/resume-img.jpg) ;
+  width:264px;
+  height:341px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
   
+}
 
-  #education .classes{
-    margin:15px;
-    color:#404040 ;
-    
-  }
-
-  #education h3{
-    margin:10px;
-  }
-
+  .card img{
+   all:unset !important;
+   width:300px;
+   height:auto;
+   object-fit:cover;
+   display:block;
   
-
-  #education .shift{
-    padding:10px;
-    padding-left:25px;
-    border-bottom-style: outset;
-    border-bottom-color:white;
-    border-bottom-width: 2px;
-  }
-
-  .classes .other:nth-child(2n + 1){
-    background-color: #73706F;
-    padding: 5px;
-    color:#F2F2F2;
-    text-shadow: .5px 0 #191818;
-
-  }
-
-  /*Cover Letter*/
-
-  #letter{
-    background-color: #191818;
-  }
-
-  #letter h2{
-    color:white;
-  }
-
-  #letter #cover{
-    margin:20px;
-    border-style: outset;
-    border-width: 5px;
-    border-color: #93908E;
-    background-color: white;
-    padding: 20px;
-  }
-
-  #letter #cover li{
-    list-style-type: none;
-  }
-
-  /* Work Examples*/
-
-  .examples{
-    background-color: #191818;
-  }
-
-  .examples h2{
-    border-style: outset;
-    border-color: #F2F2F2;
-    border-width: 5px;
-    background-color: #404040;
-    margin-bottom: 20px;
-    margin-left: 30%;
-    margin-right: 30%;
-    color:white;
-    text-decoration: none;
-  }
-
-  .examples a{
-    text-decoration: none;
-  }
-
-
-  .work-ex-pic{
-    padding-right:10px;
-    padding-bottom:10px;
-    
-  }
-
-  #capstone{
-    background-color: #191818;
-    color:#F2F2F2;
-  }
-
-  #programming{
-    background-color: #191818;
-    color:#F2F2F2;
-  }
-
-  #web-project{
-    background-color: #191818;
-    color:#F2F2F2;
-  }
-
-  #writing p{
-    padding:20px;
-  }
-
-  #web-project p{
-    padding:20px;
-  }
-
-  #database p{
-    padding:20px;
-  }
-
-  #programming p{
-    padding:20px;
-  }
-
-  #softskills p{
-    padding: 20px;
-  }
-
-  #capstone p{
-    padding:20px;
-  }
-
-  #capstone img{
-    padding-left:10px;
-  }
-
-  /* Grid Area */
-  #profile{
-    grid-area: profile;
-  }
-
-  #resume{
-    grid-area: resume;
-  }
-  
-  #education{
-    grid-area: education;
-  }
-
-  #letter{
-    grid-area: letter;
-  }
-
-  .examples{
-    grid-area: examples;
-  }
-
-  footer{
-    background-color: #191818;
-    color:#F2F2F2;
-    grid-area: footer;
-    text-align: center;
-    padding:3.5;
-    font-size: 20px;
-    padding-bottom: 10px;
-  }
-
-  h2{
-    text-align: center;
-    padding:20px;
-  }
-
-  #text-test p{
-    z-index: 2;
-    color: aqua;
-  }
-
-  /*makes the screen small to check moible (REMOVE when done)*/
-  
-  /* html {
-    width: 576px ;
-    margin-left:30%;
-  }
-   */
-
-  @media screen and (min-width:768px){
-    .work-ex-pic{
-      width: 20%;
-      float: left;
-      padding-right:25px;
-      margin-bottom: 30px;
-      
-    }
-
-    #letter{
-      padding-left:10%;
-      padding-right:10%;
-    }
-
-    #letter #cover{
-      padding:10%;
-      background-color: white;
-
-    }
-
-    .examples h2{
-      margin-left: 35%;
-      margin-right: 35%;
-
-    }
-
-
-   }
-
-
-  @media screen and (min-width:992px) { 
-
-   
-    #profile #title{
-      display: inline;
-      grid-column: 1/3;
-      grid-row: 1/2;
-    }
-    
-    #profile #title img{
-      width: 125px;
-      margin-left:45%;
-    }
-    
-    #profile .bio{
-      grid-column: 2/3;
-      grid-row: 2/3;
-      background-color: #191818;
-      color:#F2F2F2;
-      margin:10px;
-      padding:15px;
-      border-style: inset;
-      border-color: #93908E;
-      border-width: 5px;
-    }
-    
-    
-      dl {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        background-color: #191818;
-        color:#F2F2F2;
-        border-style: inset;
-        border-color: #93908E;
-        border-width: 5px;
-      }
-
-    article img{
-      float: left;
-      width: 200px;
-      }
-    
-      dl {
-        display: grid;
-        grid-template: repeat(8, auto) / 8em 1fr;
-        font-size:.9rem;
-        padding: 10px;
-        float:right;
-      }
-
-      #letter{
-        padding-left:30%;
-        padding-right:30%;
-      }
-
-      #letter #cover{
-        padding:5%;
-        border-style: solid;
-        border-width: 5px;
-        background-color: white;
-
-      }
-
-      .examples h2{
-        margin-left: 42%;
-        margin-right: 42%;
-  
-      }
-
-      
-
-      
-
-      #writing{
-        display: flex;
-        align-items: baseline;
-      }
-
-      #web-project{
-        display: flex;
-        align-items: baseline;
-      }
-
-      #database{
-        display: flex;
-        align-items: baseline;
-      }
-
-      #programming{
-        display: flex;
-        align-items: baseline;
-      }
-
-      #softskills{
-        display: flex;
-        align-items: baseline;
-      }
-
-      #capstone{
-        display: flex;
-        align-items: flex-start;
-      }
-
-      #capstone .work-ex-pic{
-        margin-left: 15%;
-        margin-top:5%;
-        width: 75%;
-      }
-
-
-      .work-ex-pic{
-        width: 45%;
-        padding-right:25px;
-        margin-bottom: 30px;
-
-        
-      }
-
-  
-
-      
-    
-
   }
