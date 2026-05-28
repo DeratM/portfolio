@@ -92,7 +92,7 @@
   }
   
   .start .section.hero {
-  background-image: url(../imgs/fer-sehen-6nS6_59REnA-unsplash.jpg);
+  background-image: url(../imgs/moutain-range.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,20 +128,25 @@
 #profile{
   display:flex;
   flex-direction:column;
-  padding-top: 10%;
- 
+  
 }
 
-#profile h2{
+  #profile h2{
   text-align: center;
+  z-index: 3;
+  color: #3A2F2A;
+  padding: 7% 0 5% 0;
+  font-size:30px;
+
 }
 
 #main-port{
-  padding: 5% 10% 0 10%;
+  padding: 0 10% 0 10%;
   display:flex;
   flex-direction:row;
   justify-content: space-evenly;
   gap:5%;
+  z-index: 3;
   
 }
 
@@ -153,6 +158,7 @@
   width:100%;
   max-width: 400px;
   aspect-ratio: 1;
+  border-radius:5%;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 
 }
@@ -162,7 +168,7 @@
   flex-direction:column;
   gap:15px;
   justify-content: center;
-  
+ 
 }
 
 .bio{
@@ -170,7 +176,6 @@
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   padding:2.5%;
   color:var(--primary-bg-color);
-
 }
 
 .details{
@@ -191,9 +196,9 @@
 }
 
   #profile img{
-    all:unset !important;
     width:5%;
   }
+
 
 
   dl {
@@ -224,11 +229,6 @@
 
 /* Resume and Cover Letter Section */
 
-#resume-CoverLetter h2{
-text-align: center;
-padding: 10% 0 2.5% 0;
-
-}
 
 
 #res-let-wrapper{
@@ -239,6 +239,14 @@ padding: 10% 0 2.5% 0;
     gap:50px;
     
 
+
+}
+
+ #resume-CoverLetter h2{
+  text-align: center;
+  color: #3A2F2A;
+  padding: 5% 0 5% 0;
+  font-size:30px;
 
 }
 
@@ -302,7 +310,6 @@ padding: 10% 0 2.5% 0;
 }
 
   .card img{
-   all:unset !important;
    width:300px;
    height:auto;
    object-fit:cover;
@@ -313,34 +320,24 @@ padding: 10% 0 2.5% 0;
 
   /* Work Examples */
 
-  #examples img{
-    all: none !important;
-  }
-
-
-body {
-  background: #F3EFEA;
-  color: #3A2F2A;
-}
 
 .head {
   max-width: 1400px;
   margin: auto;
-  padding: 70px 20px 40px;
   display: flex;
   justify-content: center;
-  padding-top:10%;
+  padding: 5% 0 5% 0;
   gap: 2rem;
 }
-.head h2 {
-  color: #3A2F2A;
+
+.head h2{
   text-align: center;
+  font-size:30px;
 }
 
+
 @media (min-width: 1024px) {
-  .head h2 {
-    font-size: 2.25rem;
-  }
+  
 }
 .nav-btn {
   width: 2.5rem;
