@@ -1,46 +1,65 @@
-// Gsap for header animation
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".wrapper",
-        start: "top top",
-        end: "+=150%",
-        pin: true,
-        scrub: true,
-      }
-    })
-    .to(".image-container img", {
-      scale: 2,
-      z: 350,
-      transformOrigin: "center center",
-      ease: "power1.inOut"
-    })
-    .to(
-      ".section.hero",
-      {
-        scale: 1.1,
-        transformOrigin: "center center",
-        ease: "power1.inOut"
-      },
-      "<"
-    );
-});
 
-// Testing out animation for the cards
-gsap.from(".card", {
-  scrollTrigger: {
-    trigger: "#res-let-wrapper",
-    start: "top 80%",  
-    toggleActions: "play none none none"
-  },
-  duration: 1.2,
-  y: 60,
-  opacity: 0,
-  ease: "power2.out",
-  stagger: 0.15
+  // ── Hero zoom (untouched) ─────────────────────────────────────────
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: "top top",
+      end: "+=150%",
+      pin: true,
+      scrub: true,
+    }
+  })
+  .to(".image-container img", {
+    scale: 2,
+    z: 350,
+    transformOrigin: "center center",
+    ease: "power1.inOut"
+  })
+  .to(".section.hero", {
+    scale: 1.1,
+    transformOrigin: "center center",
+    ease: "power1.inOut"
+  }, "<");
+
+  // ── Cards slide in from opposite sides ───────────────────────────
+  ScrollTrigger.addEventListener("refresh", () => {
+    ScrollTrigger.getAll()
+      .filter(st => st.vars.id === "cards")
+      .forEach(st => st.kill());
+
+    gsap.from(".card:nth-child(1)", {
+      scrollTrigger: {
+        id: "cards",
+        trigger: "#resume-CoverLetter",
+        start: "center center",
+        markers: true,
+        toggleActions: "play none none none",
+      },
+      duration: 5,
+      x: -150,
+      opacity: 0,
+      ease: "power2.out"
+    });
+
+    gsap.from(".card:nth-child(2)", {
+      scrollTrigger: {
+        id: "cards",
+        trigger: "#resume-CoverLetter",
+        start: "center center",
+         markers: true,
+        toggleActions: "play none none none",
+      },
+      duration: 5,
+      x: 150,
+      opacity: 0,
+      ease: "power2.out",
+      delay: 0.15
+    });
+  });
+
 });
 
 
